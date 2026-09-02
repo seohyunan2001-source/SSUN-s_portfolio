@@ -29,10 +29,11 @@
     --card-dark-text: #F4EEE1;
     --focus: #1F729E;
     --shadow: 0 1px 0 rgba(28,24,18,0.06);
-    --radius-s: 4px;
-    --radius-m: 8px;
+    --radius-s: 8px;
+    --radius-m: 20px;
+    --radius-l: 32px;
     --unit: 8px;
-    --section-pad: 128px;
+    --section-pad: 140px;
     --maxw: 1240px;
   }
 
@@ -171,9 +172,14 @@
   .btn-ghost:hover{background:var(--ink); color:var(--bg); transform:translateY(-2px);}
 
   /* ---------- Hero ---------- */
-  .hero{padding:96px 0 var(--section-pad);}
-  .hero-grid{display:grid; grid-template-columns:minmax(0,7fr) minmax(0,3fr); gap:64px; align-items:end;}
-  .hero h1{font-size:clamp(40px, 5.6vw, 72px); max-width:11.5em;}
+  .hero{padding:76px 0 var(--section-pad); position:relative; overflow:hidden;}
+  .hero-blob{
+    position:absolute; z-index:0; border-radius:50%; filter:blur(2px); opacity:.55;
+  }
+  .hero-blob.b1{width:420px; height:420px; background:var(--coral-tint); top:-140px; right:-100px;}
+  .hero-blob.b2{width:260px; height:260px; background:var(--gold-soft); bottom:-80px; right:180px;}
+  .hero-grid{display:grid; grid-template-columns:minmax(0,7fr) minmax(0,3fr); gap:64px; align-items:end; position:relative; z-index:1;}
+  .hero h1{font-size:clamp(46px, 6.4vw, 92px); max-width:11.5em; letter-spacing:-.01em;}
   .hero-sub{
     margin-top:28px; font-size:18px; color:var(--ink-soft); max-width:52ch; line-height:1.65;
   }
@@ -182,6 +188,12 @@
     border-left:1px solid var(--line); padding-left:28px;
     font-size:14px; color:var(--muted); line-height:1.9;
   }
+  .hero-photo{
+    width:100%; aspect-ratio:1/1; border-radius:var(--radius-l); overflow:hidden;
+    border:1px solid var(--line); margin-bottom:24px; transform:rotate(-2deg);
+    box-shadow:0 22px 44px -24px rgba(28,24,18,.35);
+  }
+  .hero-photo img{width:100%; height:100%; object-fit:cover; display:block;}
   .hero-aside strong{display:block; color:var(--ink); font-weight:600; font-size:13px; letter-spacing:.04em; margin-bottom:6px; font-family:'JetBrains Mono',monospace; text-transform:uppercase;}
   .hero-contact{margin-top:20px;}
   .hero-contact a{text-decoration:none; color:var(--ink-soft); font-family:'JetBrains Mono',monospace; font-size:13px; display:block; border-bottom:1px solid var(--line); padding-bottom:2px; margin-bottom:8px; width:max-content;}
@@ -359,6 +371,13 @@
     .tag-pill{display:none;}
     nav.links{gap:20px; justify-content:flex-start; mask-image:linear-gradient(to right, #000 88%, transparent);}
   }
+
+  /* ---------- Scroll reveal ---------- */
+  .reveal{opacity:0; transform:translateY(28px); transition:opacity .7s ease, transform .7s ease;}
+  .reveal.is-visible{opacity:1; transform:translateY(0);}
+  @media (prefers-reduced-motion: reduce){
+    .reveal{opacity:1; transform:none; transition:none;}
+  }
   @media (max-width: 620px){
     .wrap{padding:0 18px;}
     :root{--section-pad:64px;}
@@ -393,6 +412,8 @@
 
   <!-- HERO -->
   <section class="hero" id="top">
+    <div class="hero-blob b1"></div>
+    <div class="hero-blob b2"></div>
     <div class="wrap hero-grid">
       <div>
         <span class="eyebrow">Cell Biology → Tissue Engineering</span>
@@ -409,6 +430,7 @@
         </div>
       </div>
       <div class="hero-aside">
+        <div class="hero-photo"><img src="images/profile.jpg" alt="유서현 프로필 사진"></div>
         <strong>Currently</strong>
         서울대학교 공과대학<br>협동과정 바이오엔지니어링<br>석사과정 (2025.09 – 2027.08 예정)
         <div class="hero-contact">
@@ -435,7 +457,7 @@
   </div>
 
   <!-- RESEARCH GRID -->
-  <section id="research">
+  <section id="research" class="reveal">
     <div class="wrap">
       <div class="section-head">
         <h2>실험으로 풀어온 여섯 가지 질문</h2>
@@ -499,7 +521,7 @@
   </section>
 
   <!-- QUOTE -->
-  <section class="quote-section">
+  <section class="quote-section reveal">
     <div class="wrap">
       <blockquote>
         “세포가 스트레스에 반응하는 방식에서 조직이 다시 살아나는 방식까지 —
@@ -510,7 +532,7 @@
   </section>
 
   <!-- SKILLS -->
-  <section id="skills">
+  <section id="skills" class="reveal">
     <div class="wrap skills-layout">
       <div>
         <span class="eyebrow">Core Capabilities</span>
@@ -540,7 +562,7 @@
   </section>
 
   <!-- ABOUT -->
-  <section id="about">
+  <section id="about" class="reveal">
     <div class="wrap about-grid">
       <div>
         <div class="about-photo"><img src="images/profile.jpg" alt="유서현 프로필 사진"></div>
@@ -559,6 +581,13 @@
           보라매병원 성형외과를 거치며 미토콘드리아 분비체, 유전자 치료, 조직재생 연구를
           경험했고, 2025년 9월 서울대학교 공과대학 바이오엔지니어링 협동과정 석사과정에
           입학해 혈관이식제·켈로이드·탈모를 주제로 한 세 가지 연구를 병행하고 있습니다.
+        </p>
+        <p>
+          다섯 개 연구실을 거치며 얻은 건 기법이 아니라 <strong>현상을 끝까지 검증하는 태도</strong>였습니다.
+          세포 단위 신호를 in vitro로 확인하고, 그 결과가 실제 조직·개체 수준에서도 성립하는지 in vivo로
+          다시 검증하는 과정을 반복해 왔습니다. 최근에는 서울대 주식동아리 Equity에서 기업 재무·밸류에이션을
+          분석하며 연구 성과가 임상·산업으로 이어지는 접점에도 관심을 넓히고 있습니다. 조직재생 연구를
+          실험실 밖 가치로 연결하는 연구자가 되는 것이 다음 목표입니다.
         </p>
         <div class="about-edu">
           <div class="edu-row">
@@ -581,7 +610,7 @@
   </section>
 
   <!-- CREDENTIALS -->
-  <section id="credentials" style="background:var(--surface); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <section id="credentials" class="reveal" style="background:var(--surface); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
     <div class="wrap">
       <div class="section-head">
         <h2>성적도, 이수 과정도<br>기록으로 남깁니다.</h2>
@@ -631,7 +660,7 @@
   </section>
 
   <!-- ACTIVITIES -->
-  <section class="activity-section" id="activity">
+  <section class="activity-section reveal" id="activity">
     <div class="wrap">
       <div class="section-head">
         <h2>학회·행사 참여 이력</h2>
@@ -658,7 +687,7 @@
   </section>
 
   <!-- FAQ -->
-  <section id="faq">
+  <section id="faq" class="reveal">
     <div class="wrap faq-layout">
       <div>
         <span class="eyebrow">FAQ</span>
@@ -714,6 +743,23 @@
 </footer>
 
 <script>
+  (function(){
+    var revealEls = document.querySelectorAll('.reveal');
+    if('IntersectionObserver' in window){
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if(entry.isIntersecting){
+            entry.target.classList.add('is-visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, {threshold:0.12, rootMargin:'0px 0px -60px 0px'});
+      revealEls.forEach(function(el){ io.observe(el); });
+    } else {
+      revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+    }
+  })();
+
   // Accordion: keep only one FAQ item open at a time for a calmer, more legible list.
   (function(){
     var items = document.querySelectorAll('.faq-item');
