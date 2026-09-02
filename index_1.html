@@ -1,0 +1,731 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>유서현 · 바이오엔지니어링</title>
+<meta name="description" content="유서현 — 서울대학교 바이오엔지니어링 협동과정 석사과정 연구자. 세포 스트레스 신호전달부터 혈관·연골·모낭 조직재생까지, in vitro·in vivo 실험으로 검증하는 연구 이력과 핵심 역량을 소개합니다.">
+<meta name="keywords" content="유서현, 바이오엔지니어링, 서울대학교, 조직공학, 재생의학, in vitro, in vivo, 세포생물학, 약리학, 연구자 포트폴리오">
+<style>
+  /* ---------- Fonts ---------- */
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Archivo:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+  /* ---------- Tokens (light default) ---------- */
+  :root{
+    --bg: #F4EEE1;
+    --surface: #EAE1CE;
+    --surface-2: #FFFDF8;
+    --ink: #1C1812;
+    --ink-soft: #4A4335;
+    --muted: #7A7160;
+    --line: #DCD1B7;
+    --coral: #C8562F;
+    --coral-btn: #A84424;
+    --coral-btn-hover: #93381C;
+    --coral-tint: #E9C9B9;
+    --gold: #A67B24;
+    --gold-soft: #EFE0BC;
+    --card-dark: #1C1812;
+    --card-dark-text: #F4EEE1;
+    --focus: #A84424;
+    --shadow: 0 1px 0 rgba(28,24,18,0.06);
+    --radius-s: 4px;
+    --radius-m: 8px;
+    --unit: 8px;
+    --section-pad: 128px;
+    --maxw: 1240px;
+  }
+
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg: #16130F;
+      --surface: #201B14;
+      --surface-2: #241F17;
+      --ink: #F3ECDC;
+      --ink-soft: #D8CDB6;
+      --muted: #9C9280;
+      --line: #35301F;
+      --coral: #E68159;
+      --coral-btn: #D96A3D;
+      --coral-btn-hover: #EA8A5C;
+      --coral-tint: #3B2A22;
+      --gold: #D8AE5C;
+      --gold-soft: #3A3117;
+      --card-dark: #0F0D09;
+      --card-dark-text: #F3ECDC;
+      --focus: #E68159;
+      --shadow: 0 1px 0 rgba(0,0,0,0.4);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg: #16130F;
+    --surface: #201B14;
+    --surface-2: #241F17;
+    --ink: #F3ECDC;
+    --ink-soft: #D8CDB6;
+    --muted: #9C9280;
+    --line: #35301F;
+    --coral: #E68159;
+    --coral-btn: #D96A3D;
+    --coral-btn-hover: #EA8A5C;
+    --coral-tint: #3B2A22;
+    --gold: #D8AE5C;
+    --gold-soft: #3A3117;
+    --card-dark: #0F0D09;
+    --card-dark-text: #F3ECDC;
+    --focus: #E68159;
+    --shadow: 0 1px 0 rgba(0,0,0,0.4);
+  }
+
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Archivo', 'Pretendard', -apple-system, sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Fraunces', Georgia, serif;
+    font-weight:500;
+    line-height:1.08;
+    margin:0;
+    text-wrap:balance;
+    color:var(--ink);
+  }
+  p{margin:0;}
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  ul{margin:0;padding:0;list-style:none;}
+  button{font-family:inherit;}
+
+  .mono{font-family:'JetBrains Mono', ui-monospace, monospace; font-variant-numeric:tabular-nums;}
+
+  a:focus-visible, button:focus-visible, summary:focus-visible{
+    outline:3px solid var(--focus);
+    outline-offset:3px;
+    border-radius:2px;
+  }
+
+  .skip-link{
+    position:absolute; left:8px; top:-48px;
+    background:var(--coral-btn); color:#fff;
+    padding:10px 16px; border-radius:var(--radius-s);
+    z-index:100; transition:top .2s ease;
+    text-decoration:none; font-weight:600; font-size:14px;
+  }
+  .skip-link:focus{top:8px;}
+
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 40px;}
+  section{padding:var(--section-pad) 0;}
+  .eyebrow{
+    font-family:'JetBrains Mono', monospace;
+    font-size:12px; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--coral); font-weight:600; margin-bottom:16px; display:block;
+  }
+
+  /* ---------- Nav ---------- */
+  header.nav{
+    position:sticky; top:0; z-index:40;
+    background:color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{
+    max-width:var(--maxw); margin:0 auto; padding:18px 40px;
+    display:flex; align-items:center; justify-content:space-between; gap:24px;
+  }
+  .brand{
+    font-family:'Fraunces', serif; font-weight:600; font-size:20px;
+    text-decoration:none; letter-spacing:-.01em; white-space:nowrap; flex-shrink:0;
+  }
+  .brand span{color:var(--coral);}
+  nav.links{display:flex; gap:28px; align-items:center; overflow-x:auto; scrollbar-width:none;}
+  nav.links::-webkit-scrollbar{display:none;}
+  nav.links a{
+    text-decoration:none; font-size:14px; font-weight:500; color:var(--ink-soft);
+    padding:6px 2px; border-bottom:1px solid transparent; white-space:nowrap;
+    transition:color .15s ease, border-color .15s ease;
+  }
+  nav.links a:hover{color:var(--ink); border-color:var(--coral);}
+  .tag-pill{
+    font-family:'JetBrains Mono', monospace; font-size:11px; letter-spacing:.08em;
+    border:1px solid var(--line); border-radius:999px; padding:6px 14px;
+    color:var(--muted); white-space:nowrap;
+  }
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    display:inline-flex; align-items:center; gap:10px;
+    padding:14px 26px; border-radius:var(--radius-s);
+    font-weight:600; font-size:15px; text-decoration:none;
+    border:1px solid transparent; cursor:pointer;
+    transition:background .15s ease, transform .15s ease, color .15s ease, border-color .15s ease;
+  }
+  .btn-primary{background:var(--coral-btn); color:#fff;}
+  .btn-primary:hover{background:var(--coral-btn-hover); transform:translateY(-2px);}
+  .btn-ghost{background:transparent; color:var(--ink); border-color:var(--ink);}
+  .btn-ghost:hover{background:var(--ink); color:var(--bg); transform:translateY(-2px);}
+
+  /* ---------- Hero ---------- */
+  .hero{padding:96px 0 var(--section-pad);}
+  .hero-grid{display:grid; grid-template-columns:minmax(0,7fr) minmax(0,3fr); gap:64px; align-items:end;}
+  .hero h1{font-size:clamp(40px, 5.6vw, 72px); max-width:11.5em;}
+  .hero-sub{
+    margin-top:28px; font-size:18px; color:var(--ink-soft); max-width:52ch; line-height:1.65;
+  }
+  .hero-cta{display:flex; gap:14px; margin-top:40px; flex-wrap:wrap;}
+  .hero-aside{
+    border-left:1px solid var(--line); padding-left:28px;
+    font-size:14px; color:var(--muted); line-height:1.9;
+  }
+  .hero-aside strong{display:block; color:var(--ink); font-weight:600; font-size:13px; letter-spacing:.04em; margin-bottom:6px; font-family:'JetBrains Mono',monospace; text-transform:uppercase;}
+  .hero-contact{margin-top:20px;}
+  .hero-contact a{text-decoration:none; color:var(--ink-soft); font-family:'JetBrains Mono',monospace; font-size:13px; display:block; border-bottom:1px solid var(--line); padding-bottom:2px; margin-bottom:8px; width:max-content;}
+  .hero-contact a:hover{color:var(--coral); border-color:var(--coral);}
+
+  /* ---------- Affiliations strip ---------- */
+  .affil{border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:36px 0;}
+  .affil .wrap{display:flex; flex-wrap:wrap; gap:14px 40px; align-items:center; justify-content:space-between;}
+  .affil-label{font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--muted); letter-spacing:.06em; white-space:nowrap;}
+  .affil-list{display:flex; flex-wrap:wrap; gap:12px 34px; flex:1;}
+  .affil-list span{font-family:'Fraunces', serif; font-size:16px; color:var(--ink-soft); font-weight:500; white-space:nowrap;}
+
+  /* ---------- Section heads ---------- */
+  .section-head{display:flex; justify-content:space-between; align-items:flex-end; gap:32px; margin-bottom:56px; flex-wrap:wrap;}
+  .section-head h2{font-size:clamp(30px,3.4vw,44px); max-width:13em;}
+  .section-head p{color:var(--muted); font-size:15px; max-width:38ch;}
+
+  /* ---------- Research grid ---------- */
+  .research-grid{
+    display:grid; grid-template-columns:repeat(4, 1fr); gap:28px;
+  }
+  .rcard{
+    border-radius:var(--radius-m); padding:28px; min-height:220px;
+    display:flex; flex-direction:column; justify-content:space-between;
+    transition:transform .25s ease, box-shadow .25s ease;
+    box-shadow:var(--shadow);
+  }
+  .rcard.big{grid-column:span 2; min-height:280px;}
+  .rcard .rn{font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:.08em; opacity:.75;}
+  .rcard h3{font-size:21px; margin-top:18px; font-weight:500;}
+  .rcard .rmeta{font-size:13px; margin-top:16px; opacity:.8; line-height:1.55;}
+  .rcard.c-ink{background:var(--card-dark); color:var(--card-dark-text); transform:rotate(-1.2deg);}
+  .rcard.c-coral{background:var(--coral-tint); color:var(--ink); border:1px solid color-mix(in srgb, var(--coral) 40%, transparent); transform:rotate(.8deg);}
+  .rcard.c-cream{background:var(--surface-2); color:var(--ink); border:1px solid var(--line); transform:rotate(-.6deg);}
+  .rcard.c-gold{background:var(--gold-soft); color:var(--ink); border:1px solid color-mix(in srgb, var(--gold) 45%, transparent); transform:rotate(1.1deg);}
+  .rcard:hover{transform:rotate(0deg) translateY(-6px); box-shadow:0 18px 34px -18px rgba(28,24,18,.35);}
+
+  .research-more{margin-top:44px; text-align:center;}
+  .research-more a{
+    font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:.05em;
+    text-decoration:none; color:var(--ink-soft); border-bottom:1px solid var(--ink-soft); padding-bottom:3px;
+  }
+  .research-more a:hover{color:var(--coral); border-color:var(--coral);}
+
+  /* ---------- Pull quote ---------- */
+  .quote-section{background:var(--surface); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .quote-section blockquote{
+    max-width:820px; margin:0 auto; text-align:center;
+    font-family:'Fraunces', serif; font-style:italic; font-weight:400;
+    font-size:clamp(24px, 3vw, 36px); line-height:1.5; color:var(--ink);
+  }
+  .quote-section cite{
+    display:block; margin-top:28px; font-style:normal; font-family:'JetBrains Mono',monospace;
+    font-size:13px; color:var(--muted); letter-spacing:.04em;
+  }
+
+  /* ---------- Skills / services ---------- */
+  .skills-layout{display:grid; grid-template-columns:minmax(0,4fr) minmax(0,6fr); gap:64px;}
+  .skills-list li{
+    display:flex; align-items:baseline; gap:16px; padding:20px 0; border-bottom:1px solid var(--line);
+  }
+  .skills-list li:first-child{border-top:1px solid var(--line);}
+  .skills-list .sk-num{font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--coral);}
+  .skills-list .sk-name{font-family:'Fraunces',serif; font-size:19px; font-weight:500;}
+  .skills-detail{display:grid; gap:22px;}
+  .skill-block{border:1px solid var(--line); border-radius:var(--radius-m); padding:26px; background:var(--surface-2);}
+  .skill-block h3{font-size:16px; font-family:'Archivo',sans-serif; font-weight:700; letter-spacing:.01em; margin-bottom:10px;}
+  .skill-block p{font-size:14px; color:var(--ink-soft); line-height:1.7;}
+
+  /* ---------- About ---------- */
+  .about-grid{display:grid; grid-template-columns:minmax(0,3fr) minmax(0,7fr); gap:56px; align-items:start;}
+  .about-photo{
+    aspect-ratio:4/5; border-radius:var(--radius-m); border:1px dashed var(--line);
+    background:var(--surface); display:flex; align-items:center; justify-content:center;
+    color:var(--muted); font-size:13px; text-align:center; padding:24px; font-family:'JetBrains Mono',monospace;
+  }
+  .about-copy p{font-size:16px; color:var(--ink-soft); margin-bottom:20px; max-width:60ch; line-height:1.75;}
+  .about-edu{margin-top:32px; display:grid; gap:18px;}
+  .edu-row{display:grid; grid-template-columns:150px 1fr; gap:18px; padding:16px 0; border-top:1px solid var(--line);}
+  .edu-row .period{font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--muted);}
+  .edu-row .school{font-weight:600; font-size:15px;}
+  .edu-row .major{font-size:14px; color:var(--ink-soft); margin-top:4px;}
+
+  /* ---------- Credentials (3 card) ---------- */
+  .cred-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px; align-items:stretch;}
+  .cred-card{
+    border:1px solid var(--line); border-radius:var(--radius-m); padding:32px;
+    background:var(--surface-2); display:flex; flex-direction:column; gap:18px;
+  }
+  .cred-card.featured{
+    background:var(--card-dark); color:var(--card-dark-text); border-color:var(--card-dark);
+    transform:translateY(-14px); box-shadow:0 22px 40px -22px rgba(28,24,18,.4);
+  }
+  .cred-card .cred-tag{font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--coral);}
+  .cred-card.featured .cred-tag{color:var(--coral);}
+  .cred-card h3{font-size:20px; font-family:'Fraunces',serif; font-weight:500;}
+  .cred-figure{font-family:'JetBrains Mono',monospace; font-size:30px; font-weight:600; margin-top:2px;}
+  .cred-card ul{display:grid; gap:8px; margin-top:8px;}
+  .cred-card ul li{font-size:13.5px; color:var(--ink-soft); position:relative; padding-left:16px;}
+  .cred-card.featured ul li{color:color-mix(in srgb, var(--card-dark-text) 80%, transparent);}
+  .cred-card ul li::before{content:"—"; position:absolute; left:0; color:var(--coral);}
+
+  .awards-row{
+    margin-top:40px; display:flex; flex-wrap:wrap; gap:10px 14px; justify-content:center;
+  }
+  .award-chip{
+    font-family:'JetBrains Mono',monospace; font-size:12.5px; border:1px solid var(--line);
+    border-radius:999px; padding:8px 16px; color:var(--ink-soft); background:var(--surface-2);
+  }
+
+  /* ---------- Activities grid ---------- */
+  .activity-section{background:var(--surface); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .activity-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:var(--radius-m); overflow:hidden;}
+  .a-card{background:var(--surface-2); padding:26px; display:flex; flex-direction:column; gap:10px; min-height:150px;}
+  .a-card .a-date{font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--coral); letter-spacing:.03em;}
+  .a-card .a-name{font-size:15px; font-weight:600; line-height:1.4;}
+  .a-card .a-note{font-size:13px; color:var(--muted); line-height:1.5;}
+
+  /* ---------- FAQ ---------- */
+  .faq-layout{display:grid; grid-template-columns:minmax(0,7fr) minmax(0,3fr); gap:56px; align-items:start;}
+  .faq-item{border-top:1px solid var(--line);}
+  .faq-item:last-child{border-bottom:1px solid var(--line);}
+  .faq-item summary{
+    list-style:none; cursor:pointer; padding:24px 0; display:flex; justify-content:space-between; align-items:center; gap:20px;
+    font-family:'Fraunces',serif; font-size:18px; font-weight:500;
+  }
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item .plus{font-family:'JetBrains Mono',monospace; font-size:20px; color:var(--coral); transition:transform .2s ease; flex-shrink:0;}
+  .faq-item[open] .plus{transform:rotate(45deg);}
+  .faq-item .faq-a{padding:0 0 26px; color:var(--ink-soft); font-size:15px; line-height:1.75; max-width:64ch;}
+  .contact-card{
+    background:var(--card-dark); color:var(--card-dark-text); border-radius:var(--radius-m);
+    padding:34px; display:flex; flex-direction:column; gap:16px; position:sticky; top:104px;
+  }
+  .contact-card h3{font-family:'Fraunces',serif; font-size:22px; font-weight:500; color:var(--card-dark-text);}
+  .contact-card p{font-size:14px; color:color-mix(in srgb, var(--card-dark-text) 78%, transparent); line-height:1.6;}
+  .contact-card .btn-primary{background:var(--coral); color:var(--card-dark); justify-content:center;}
+  .contact-card .btn-primary:hover{background:color-mix(in srgb, var(--coral) 85%, white);}
+
+  /* ---------- Footer CTA ---------- */
+  footer.cta{background:var(--card-dark); color:var(--card-dark-text); padding:var(--section-pad) 0 60px;}
+  footer.cta h2{
+    font-size:clamp(38px, 6vw, 88px); color:var(--card-dark-text); font-weight:400; letter-spacing:-.01em;
+  }
+  footer.cta h2 em{color:var(--coral); font-style:normal;}
+  .foot-grid{display:grid; grid-template-columns:minmax(0,7fr) minmax(0,3fr); gap:40px; align-items:end; margin-top:64px; padding-top:36px; border-top:1px solid color-mix(in srgb, var(--card-dark-text) 18%, transparent);}
+  .foot-contact{display:flex; flex-wrap:wrap; gap:28px;}
+  .foot-contact a{
+    text-decoration:none; color:var(--card-dark-text); font-family:'JetBrains Mono',monospace; font-size:14px;
+    border-bottom:1px solid color-mix(in srgb, var(--card-dark-text) 35%, transparent); padding-bottom:3px;
+  }
+  .foot-contact a:hover{border-color:var(--coral); color:var(--coral);}
+  .foot-meta{font-size:12.5px; color:color-mix(in srgb, var(--card-dark-text) 55%, transparent); text-align:right; line-height:1.7;}
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 980px){
+    .wrap{padding:0 24px;}
+    :root{--section-pad:88px;}
+    .hero{padding-top:64px;}
+    .hero-grid{grid-template-columns:1fr; gap:36px;}
+    .hero-aside{border-left:none; border-top:1px solid var(--line); padding-left:0; padding-top:24px;}
+    .research-grid{grid-template-columns:repeat(2,1fr);}
+    .rcard.big{grid-column:span 2;}
+    .skills-layout{grid-template-columns:1fr; gap:36px;}
+    .about-grid{grid-template-columns:1fr;}
+    .about-photo{max-width:280px;}
+    .cred-grid{grid-template-columns:1fr; gap:20px;}
+    .cred-card.featured{transform:none;}
+    .activity-grid{grid-template-columns:repeat(2,1fr);}
+    .faq-layout{grid-template-columns:1fr;}
+    .contact-card{position:static;}
+    .foot-grid{grid-template-columns:1fr;}
+    .foot-meta{text-align:left;}
+    .nav-inner{padding:16px 24px; gap:16px;}
+    .tag-pill{display:none;}
+    nav.links{gap:20px; justify-content:flex-start; mask-image:linear-gradient(to right, #000 88%, transparent);}
+  }
+  @media (max-width: 620px){
+    .wrap{padding:0 18px;}
+    :root{--section-pad:64px;}
+    .research-grid{grid-template-columns:1fr;}
+    .rcard.big{grid-column:span 1;}
+    .rcard{transform:none !important;}
+    .activity-grid{grid-template-columns:1fr;}
+    .edu-row{grid-template-columns:1fr; gap:6px;}
+    .section-head{align-items:flex-start;}
+  }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">본문으로 건너뛰기</a>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top">유서현<span>.</span></a>
+    <nav class="links" aria-label="주요 섹션">
+      <a href="#research">연구</a>
+      <a href="#skills">역량</a>
+      <a href="#about">소개</a>
+      <a href="#credentials">학력·성과</a>
+      <a href="#faq">문의</a>
+    </nav>
+    <span class="tag-pill">Bioengineering Researcher</span>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Cell Biology → Tissue Engineering</span>
+        <h1>세포의 스트레스 신호부터 조직의 재생까지, 실험으로 확인합니다.</h1>
+        <p class="hero-sub">
+          단국대학교에서 의생명공학을 전공하고, 현재 서울대학교 공과대학 바이오엔지니어링
+          협동과정 석사과정에 재학 중입니다. 세포 신호전달 연구를 시작으로 유전자 치료,
+          혈관·연골·모낭 조직재생까지 — in vitro와 in vivo 실험을 오가며 현상을 검증하는
+          방식으로 연구해 왔습니다.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#research">연구 이력 보기</a>
+          <a class="btn btn-ghost" href="mailto:ssun01@snu.ac.kr">이메일 보내기</a>
+        </div>
+      </div>
+      <div class="hero-aside">
+        <strong>Currently</strong>
+        서울대학교 공과대학<br>협동과정 바이오엔지니어링<br>석사과정 (2025.09 – 2027.08 예정)
+        <div class="hero-contact">
+          <a href="mailto:ssun01@snu.ac.kr">ssun01@snu.ac.kr</a>
+          <a href="tel:01081727622">010-8172-7622</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AFFILIATIONS -->
+  <div class="affil">
+    <div class="wrap">
+      <span class="affil-label">RESEARCH AFFILIATIONS —</span>
+      <div class="affil-list">
+        <span>단국대학교 의과대학 약리학교실</span>
+        <span>서울대학교 치의학대학원 약리학교실</span>
+        <span>서울대학교병원 이비인후과</span>
+        <span>서울대학교 보라매병원 성형외과</span>
+        <span>서울대학교 공과대학 바이오엔지니어링</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- RESEARCH GRID -->
+  <section id="research">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>실험으로 풀어온 여섯 가지 질문</h2>
+        <p>학부 연구생부터 석사과정까지, 각 연구실에서 직접 설계하고 수행한 연구 주제입니다.</p>
+      </div>
+      <div class="research-grid">
+
+        <article class="rcard big c-ink">
+          <span class="rn">01 · 25.09 – 진행중</span>
+          <div>
+            <h3>혈관이식제 탈세포 연구</h3>
+            <p class="rmeta">당뇨환자 혈관경화 치료를 위한 탈세포 혈관이식제 개발 지원 — IF, qPCR, slide staining</p>
+          </div>
+        </article>
+
+        <article class="rcard c-coral">
+          <span class="rn">02 · 25.09 – 진행중</span>
+          <div>
+            <h3>Keloid Mechanotransduction</h3>
+            <p class="rmeta">Y27632 약물 반응 연구(화학과 공동연구) — primary cell culture, ICC, Strex stretching, CCK-8</p>
+          </div>
+        </article>
+
+        <article class="rcard c-gold">
+          <span class="rn">03 · 25.09 – 진행중</span>
+          <div>
+            <h3>DKK1 · AGA 탈모 약물기전</h3>
+            <p class="rmeta">Gallocyanine 기전 연구 — spheroid formation, CCK-8 assay, ICC, qPCR</p>
+          </div>
+        </article>
+
+        <article class="rcard c-cream">
+          <span class="rn">04 · 24.02 – 24.08</span>
+          <div>
+            <h3>Mitochondria Secretome & 골재생</h3>
+            <p class="rmeta">서울대 치의학대학원 — 골재생에 관여하는 미토콘드리아 분비물질과 지방·근육·간 조직에 대한 영향 연구</p>
+          </div>
+        </article>
+
+        <article class="rcard big c-coral">
+          <span class="rn">05 · 24.10 – 25.01</span>
+          <div>
+            <h3>Inner Ear Gene Therapy</h3>
+            <p class="rmeta">서울대학교병원 이비인후과 — KO mouse model 대상 AAV capsid Gene therapy injection, ABR·DPOAE 청력측정, IHC, H&E</p>
+          </div>
+        </article>
+
+        <article class="rcard c-ink">
+          <span class="rn">06 · 23.03 – 23.09</span>
+          <div>
+            <h3>RF-EMF Cell Stress & In vivo 반응</h3>
+            <p class="rmeta">HaCaT·B16 세포 UV/화학손상 회복, VPA 유발 mouse 모델의 신경질환 인자 및 TRPV2/3 비교연구</p>
+          </div>
+        </article>
+
+      </div>
+      <div class="research-more">
+        <a href="#activity">학회 참석 및 활동 전체 보기 →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <section class="quote-section">
+    <div class="wrap">
+      <blockquote>
+        “세포가 스트레스에 반응하는 방식에서 조직이 다시 살아나는 방식까지 —
+        저는 그 사이의 신호 하나하나를 실험으로 확인하는 사람입니다.”
+        <cite>유서현 · 연구 원칙</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="wrap skills-layout">
+      <div>
+        <span class="eyebrow">Core Capabilities</span>
+        <h2 style="font-size:clamp(28px,3vw,40px); margin-bottom:24px;">실험실 안팎에서<br>데이터로 증명합니다.</h2>
+        <ul class="skills-list">
+          <li><span class="sk-num mono">01</span><span class="sk-name">In vitro 실험</span></li>
+          <li><span class="sk-num mono">02</span><span class="sk-name">In vivo 실험</span></li>
+          <li><span class="sk-num mono">03</span><span class="sk-name">실험 데이터 분석 및 발표</span></li>
+          <li><span class="sk-num mono">04</span><span class="sk-name">기업·투자 분석</span></li>
+        </ul>
+      </div>
+      <div class="skills-detail">
+        <div class="skill-block">
+          <h3>In vitro</h3>
+          <p>Primary cell culture, Genotyping, Cryo-section, Western blot, BCA protein assay, Imaging &amp; Staining(H&amp;E, MT, Oil Red O, IHC), qPCR, ICC, CCK-8 assay, Spheroid formation</p>
+        </div>
+        <div class="skill-block">
+          <h3>In vivo</h3>
+          <p>Mouse dissection(Brain, Fat, Muscle, Aorta), Grip strength test, Treadmill test, Social interaction test, Tail suspension test, Nesting behavior test</p>
+        </div>
+        <div class="skill-block">
+          <h3>기업·투자 분석 <span class="mono" style="font-size:12px; color:var(--muted); font-weight:400;">— 서울대 주식동아리 Equity</span></h3>
+          <p>국내상장 기업 재무제표 분석, 코스피·코스닥 상장 주식 레포트 작성 및 발표, 펀드 구성 및 매니징, 기업 밸류에이션 평가</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap about-grid">
+      <div>
+        <div class="about-photo">[프로필 사진 입력 필요]</div>
+      </div>
+      <div class="about-copy">
+        <span class="eyebrow">About</span>
+        <h2 style="font-size:clamp(26px,3vw,36px); margin-bottom:20px;">단국대학교 학부연구생에서<br>서울대학교 석사과정까지</h2>
+        <p>
+          단국대학교 생명공학대학에서 의생명공학을 전공하며 세포생물학, 분자생물학, 약리학,
+          조직병리학 등을 이수했습니다. 학부 3학년부터 약리학교실에서 학부연구생으로
+          세포 스트레스 신호전달 연구를 시작했고, 졸업 논문으로 &lt;Consumption and effect
+          of low-calorie artificial sweeteners&gt;를 작성했습니다.
+        </p>
+        <p>
+          졸업 후에는 서울대학교 치의학대학원, 서울대학교병원 이비인후과, 서울대학교
+          보라매병원 성형외과를 거치며 미토콘드리아 분비체, 유전자 치료, 조직재생 연구를
+          경험했고, 2025년 9월 서울대학교 공과대학 바이오엔지니어링 협동과정 석사과정에
+          입학해 혈관이식제·켈로이드·탈모를 주제로 한 세 가지 연구를 병행하고 있습니다.
+        </p>
+        <div class="about-edu">
+          <div class="edu-row">
+            <span class="period mono">2025.09 –<br>2027.08 예정</span>
+            <div>
+              <div class="school">서울대학교 공과대학</div>
+              <div class="major">협동과정 바이오엔지니어링 전공 · 석사과정</div>
+            </div>
+          </div>
+          <div class="edu-row">
+            <span class="period mono">2020.03 –<br>2024.02</span>
+            <div>
+              <div class="school">단국대학교 생명공학대학</div>
+              <div class="major">의생명공학 전공 · 학사 졸업</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDENTIALS -->
+  <section id="credentials" style="background:var(--surface); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>성적도, 이수 과정도<br>기록으로 남깁니다.</h2>
+        <p>학부·석사 성적과 어학 성적, 그리고 연구 외 이수한 핵심 교육과정입니다.</p>
+      </div>
+      <div class="cred-grid">
+        <div class="cred-card">
+          <span class="cred-tag">학부 성적</span>
+          <h3>단국대학교 의생명공학</h3>
+          <div class="cred-figure">4.00<span style="font-size:16px;">/4.5</span></div>
+          <ul>
+            <li>환산평균 95/100</li>
+            <li>TEPS 353</li>
+            <li>2020~2021 전 학기 성적우수</li>
+          </ul>
+        </div>
+        <div class="cred-card featured">
+          <span class="cred-tag">석사과정 성적</span>
+          <h3>서울대학교 바이오엔지니어링</h3>
+          <div class="cred-figure">3.84<span style="font-size:16px;">/4.3</span></div>
+          <ul>
+            <li>환산평균 95.4/100</li>
+            <li>보유 어학: OPIc, TOEIC</li>
+            <li>2025.09 입학 · 재학 중</li>
+          </ul>
+        </div>
+        <div class="cred-card">
+          <span class="cred-tag">수료 · 자격</span>
+          <h3>SNU VC Investment Camp</h3>
+          <div class="cred-figure" style="font-size:20px;">16.5시간</div>
+          <ul>
+            <li>2026 SNU Venture Capital Investment Analysis Camp</li>
+            <li>수료증 발급번호 SNU-202607-vl1nkg</li>
+            <li>투자심사보고서 작성·발표 및 현직 VC 피드백 완료</li>
+          </ul>
+        </div>
+      </div>
+      <div class="awards-row">
+        <span class="award-chip">2020-1 성적우수</span>
+        <span class="award-chip">2020-2 성적우수</span>
+        <span class="award-chip">2021-1 성적우수</span>
+        <span class="award-chip">2021-2 성적우수</span>
+        <span class="award-chip">2023-2 단우장학금</span>
+        <span class="award-chip">2024 우등상 졸업</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACTIVITIES -->
+  <section class="activity-section" id="activity">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>학회·행사 참여 이력</h2>
+        <p>연구실 밖에서도 최신 동향을 확인하고 네트워크를 넓혀온 기록입니다.</p>
+      </div>
+      <div class="activity-grid">
+        <div class="a-card"><span class="a-date mono">2021.04</span><span class="a-name">한국생물공학회 참석</span></div>
+        <div class="a-card"><span class="a-date mono">2022.06</span><span class="a-name">한국미생물생명공학회 참석</span></div>
+        <div class="a-card"><span class="a-date mono">2023.05</span><span class="a-name">한국공업화학회 참석</span></div>
+        <div class="a-card"><span class="a-date mono">2023.10</span><span class="a-name">의생명공학부 학술제 포스터 발표</span></div>
+        <div class="a-card"><span class="a-date mono">2024.03</span><span class="a-name">대한근감소증학회 제16차 참석</span></div>
+        <div class="a-card"><span class="a-date mono">2024.04</span><span class="a-name">SICEM 2024 학회 참석</span></div>
+        <div class="a-card"><span class="a-date mono">2024.11</span><span class="a-name">한국유전자교정학회 정기학술대회</span></div>
+        <div class="a-card"><span class="a-date mono">2025.09</span><span class="a-name">25년 춘계·추계 생체재료학회 참석</span><span class="a-note">추계 25.09.10–12</span></div>
+        <div class="a-card"><span class="a-date mono">2025.09</span><span class="a-name">제5회 SNU Bio-day 참석</span></div>
+        <div class="a-card"><span class="a-date mono">2025.09</span><span class="a-name">대한성형외과학회 기초의학연구회 심포지엄</span></div>
+        <div class="a-card"><span class="a-date mono">2025.11</span><span class="a-name">제17회 바이오엔지니어링 학술대회 발표</span></div>
+        <div class="a-card"><span class="a-date mono">2026.03–07</span><span class="a-name">서울대 주식동아리 Equity 운영진 활동</span></div>
+        <div class="a-card"><span class="a-date mono">2025.10</span><span class="a-name">HACK SNU 2025 IR 피칭데이 참관</span></div>
+        <div class="a-card"><span class="a-date mono">2025.12</span><span class="a-name">SNUSV DEMO DAY 참석</span></div>
+        <div class="a-card"><span class="a-date mono">2026.07</span><span class="a-name">SNUSV × AZIT Bridging Event(SABE 2026) 참석</span><span class="a-note">창업가·투자자 네트워킹</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap faq-layout">
+      <div>
+        <span class="eyebrow">FAQ</span>
+        <h2 style="font-size:clamp(28px,3vw,40px); margin-bottom:8px;">자주 궁금해하시는 것들</h2>
+        <div style="margin-top:32px;">
+          <details class="faq-item" open>
+            <summary>주로 다루는 실험 기법은 무엇인가요?<span class="plus">+</span></summary>
+            <div class="faq-a">In vitro에서는 primary cell culture, western blot, qPCR, ICC, IHC, staining(H&amp;E·MT·Oil Red O) 등을, in vivo에서는 mouse dissection과 행동 실험(grip strength, treadmill, social interaction, tail suspension, nesting behavior)을 다뤄왔습니다.</div>
+          </details>
+          <details class="faq-item">
+            <summary>현재 소속과 연구 주제는 무엇인가요?<span class="plus">+</span></summary>
+            <div class="faq-a">서울대학교 공과대학 협동과정 바이오엔지니어링 석사과정(2025.09 입학) 소속으로, 당뇨환자 혈관이식제 탈세포 연구, 켈로이드 mechanotransduction 연구, DKK1 기반 AGA 탈모 약물기전 연구를 함께 진행하고 있습니다.</div>
+          </details>
+          <details class="faq-item">
+            <summary>연구 외에는 어떤 활동을 하나요?<span class="plus">+</span></summary>
+            <div class="faq-a">서울대학교 주식동아리 Equity에서 운영진으로 활동하며 재무제표 분석과 기업 밸류에이션 레포트를 작성했고, 2026년 SNU VC Investment Camp를 수료하며 투자심사보고서 작성을 경험했습니다.</div>
+          </details>
+          <details class="faq-item">
+            <summary>연락은 어떻게 하면 되나요?<span class="plus">+</span></summary>
+            <div class="faq-a">이메일(ssun01@snu.ac.kr) 또는 전화(010-8172-7622)로 언제든 연락 주시면 확인 후 회신드립니다.</div>
+          </details>
+        </div>
+      </div>
+      <div>
+        <div class="contact-card">
+          <h3>더 궁금한 점이 있다면</h3>
+          <p>연구 협업, 인턴십, 공동연구 제안 등 어떤 문의든 이메일로 편하게 남겨주세요.</p>
+          <a class="btn btn-primary" href="mailto:ssun01@snu.ac.kr">이메일 보내기</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER CTA -->
+<footer class="cta">
+  <div class="wrap">
+    <h2>함께 검증하고,<br><em>함께 재생시킵니다.</em></h2>
+    <div class="foot-grid">
+      <div class="foot-contact">
+        <a href="mailto:ssun01@snu.ac.kr">ssun01@snu.ac.kr</a>
+        <a href="tel:01081727622">010-8172-7622</a>
+        <a href="#top">맨 위로</a>
+      </div>
+      <div class="foot-meta">
+        © 2026 유서현<br>
+        서울대학교 공과대학 바이오엔지니어링 협동과정<br>
+        LinkedIn · ORCID [입력 필요]
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Accordion: keep only one FAQ item open at a time for a calmer, more legible list.
+  (function(){
+    var items = document.querySelectorAll('.faq-item');
+    items.forEach(function(item){
+      item.addEventListener('toggle', function(){
+        if(item.open){
+          items.forEach(function(other){
+            if(other !== item) other.open = false;
+          });
+        }
+      });
+    });
+  })();
+</script>
+
+</body></html>
