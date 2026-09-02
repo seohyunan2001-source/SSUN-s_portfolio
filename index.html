@@ -254,10 +254,10 @@
   /* ---------- About ---------- */
   .about-grid{display:grid; grid-template-columns:minmax(0,3fr) minmax(0,7fr); gap:56px; align-items:start;}
   .about-photo{
-    aspect-ratio:4/5; border-radius:var(--radius-m); border:1px dashed var(--line);
-    background:var(--surface); display:flex; align-items:center; justify-content:center;
-    color:var(--muted); font-size:13px; text-align:center; padding:24px; font-family:'JetBrains Mono',monospace;
+    aspect-ratio:4/5; border-radius:var(--radius-m); border:1px solid var(--line);
+    background:var(--surface); overflow:hidden;
   }
+  .about-photo img{width:100%; height:100%; object-fit:cover; display:block;}
   .about-copy p{font-size:16px; color:var(--ink-soft); margin-bottom:20px; max-width:60ch; line-height:1.75;}
   .about-edu{margin-top:32px; display:grid; gap:18px;}
   .edu-row{display:grid; grid-template-columns:150px 1fr; gap:18px; padding:16px 0; border-top:1px solid var(--line);}
@@ -543,7 +543,7 @@
   <section id="about">
     <div class="wrap about-grid">
       <div>
-        <div class="about-photo">[프로필 사진 입력 필요]</div>
+        <div class="about-photo"><img src="images/profile.jpg" alt="유서현 프로필 사진"></div>
       </div>
       <div class="about-copy">
         <span class="eyebrow">About</span>
